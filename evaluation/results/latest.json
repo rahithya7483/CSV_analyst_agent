@@ -1,0 +1,679 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "questions": 27,
+  "agent": {
+    "summary": {
+      "overall": {
+        "questions": 27,
+        "correct": 26,
+        "accuracy": 96.3,
+        "avg_tool_calls": 1.15,
+        "avg_seconds": 2.41,
+        "errors": 0
+      },
+      "by_dataset": {
+        "employees": {
+          "questions": 15,
+          "correct": 15,
+          "accuracy": 100.0,
+          "avg_tool_calls": 1.13,
+          "avg_seconds": 1.3,
+          "errors": 0
+        },
+        "sales": {
+          "questions": 12,
+          "correct": 11,
+          "accuracy": 91.7,
+          "avg_tool_calls": 1.17,
+          "avg_seconds": 3.81,
+          "errors": 0
+        }
+      }
+    },
+    "rows": [
+      {
+        "dataset": "employees",
+        "question": "What is the average salary?",
+        "expected": 66333.33333333333,
+        "answer": "Average salary: 66333.33",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.24
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the highest salary?",
+        "expected": 95000.0,
+        "answer": "The highest salary in the dataset is **95000**.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.18
+      },
+      {
+        "dataset": "employees",
+        "question": "Who earns the highest salary?",
+        "expected": "Ravi",
+        "answer": "**Highest earner:** Ravi \u2013 salary\u202f95000.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.25
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees work in Engineering?",
+        "expected": 6.0,
+        "answer": "6 employees work in Engineering.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 0.95
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees are based in Hyderabad?",
+        "expected": 4.0,
+        "answer": "4 employees are based in Hyderabad.",
+        "correct": true,
+        "tool_calls": 2,
+        "steps": 3,
+        "error": null,
+        "seconds": 1.85
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average salary in the Engineering department?",
+        "expected": 81666.66666666667,
+        "answer": "Average salary in Engineering: **81666.67**",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.62
+      },
+      {
+        "dataset": "employees",
+        "question": "Which department has the highest average salary?",
+        "expected": "Engineering",
+        "answer": "Engineering has the highest average salary: 81666.67.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.24
+      },
+      {
+        "dataset": "employees",
+        "question": "How much higher is the average Engineering salary than the average Marketing salary?",
+        "expected": 21666.66666666667,
+        "answer": "Average Engineering salary: 81666.67  \nAverage Marketing salary: 60000.0  \n\nDifference: 81666.67\u202f\u2013\u202f60000.0\u202f=\u202f21666.67 higher.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.26
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the total salary paid to the HR department?",
+        "expected": 205000.0,
+        "answer": "Total salary paid to the HR department: 205000.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.2
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees have more than 5 years of experience?",
+        "expected": 5.0,
+        "answer": "5 employees have more than 5 years of experience.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.28
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average salary of Engineering employees based in Hyderabad?",
+        "expected": 76250.0,
+        "answer": "Average salary: 76250.0 (Engineering employees in Hyderabad).",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.29
+      },
+      {
+        "dataset": "employees",
+        "question": "Which department has the most employees?",
+        "expected": "Engineering",
+        "answer": "Engineering has the most employees (6).",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 0.84
+      },
+      {
+        "dataset": "employees",
+        "question": "Who are the three lowest-paid employees?",
+        "expected": [
+          "Sneha",
+          "Kavya",
+          "Karthik"
+        ],
+        "answer": "Sneha, Kavya, Karthik",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 0.87
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average experience in years of HR employees?",
+        "expected": 2.75,
+        "answer": "Average experience of HR employees: 2.75 years.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.41
+      },
+      {
+        "dataset": "employees",
+        "question": "What percentage of employees work in Marketing?",
+        "expected": 33.33333333333333,
+        "answer": "Marketing employees: 5 out of 15 total employees.  \nPercentage = (5\u202f/\u202f15)\u202f\u00d7\u202f100\u202f=\u202f33.33\u202f%.",
+        "correct": true,
+        "tool_calls": 2,
+        "steps": 3,
+        "error": null,
+        "seconds": 1.96
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue?",
+        "expected": 118600900.0,
+        "answer": "Total revenue: 118,600,900.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.08
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the average number of units per order?",
+        "expected": 15.5125,
+        "answer": "Average units per order: 15.51 (mean of the\u202funits\u202fcolumn).",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.31
+      },
+      {
+        "dataset": "sales",
+        "question": "Which region has the highest total revenue?",
+        "expected": "West",
+        "answer": "West \u2013\u202f$41,153,800 in total revenue.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.23
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue for the West region?",
+        "expected": 41153800.0,
+        "answer": "Total revenue for the West region: 41\u202f153\u202f800.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.62
+      },
+      {
+        "dataset": "sales",
+        "question": "How many orders came from the Corporate segment?",
+        "expected": 72.0,
+        "answer": "72 orders came from the Corporate segment.",
+        "correct": true,
+        "tool_calls": 3,
+        "steps": 4,
+        "error": null,
+        "seconds": 5.76
+      },
+      {
+        "dataset": "sales",
+        "question": "Which product category has the highest average revenue per order?",
+        "expected": "Laptop",
+        "answer": "The model returned an empty answer.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 2.94
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the average unit price of Laptop orders?",
+        "expected": 71075.0,
+        "answer": "Average unit price for Laptop orders: **71075.0** (mean from 48 rows).",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 20.51
+      },
+      {
+        "dataset": "sales",
+        "question": "Which three orders have the highest revenue? Give their order IDs.",
+        "expected": [
+          "ORD-1185",
+          "ORD-1157",
+          "ORD-1121"
+        ],
+        "answer": "The three orders with the highest revenue are:\n\n1. **ORD-1185** \u2013 revenue\u202f=\u202f2,479,500  \n2. **ORD-1157** \u2013 revenue\u202f=\u202f2,282,000  \n3. **ORD-1121** \u2013 revenue\u202f=\u202f2,125,700",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.28
+      },
+      {
+        "dataset": "sales",
+        "question": "Which month has the highest total revenue?",
+        "expected": "May",
+        "answer": "May, with a total revenue of\u202f16,838,000.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 0.91
+      },
+      {
+        "dataset": "sales",
+        "question": "How many orders had more than 20 units?",
+        "expected": 83.0,
+        "answer": "83 orders had more than 20 units.",
+        "correct": true,
+        "tool_calls": 2,
+        "steps": 3,
+        "error": null,
+        "seconds": 2.88
+      },
+      {
+        "dataset": "sales",
+        "question": "How much more total revenue did the North region make than the South region?",
+        "expected": 1131200.0,
+        "answer": "North region revenue: 24\u202f043\u202f200  \nSouth region revenue: 22\u202f912\u202f000  \n\nDifference: 24\u202f043\u202f200\u202f\u2013\u202f22\u202f912\u202f000\u202f=\u202f1\u202f131\u202f200.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 5.07
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue from Phone orders in the Retail segment?",
+        "expected": 9194700.0,
+        "answer": "Total revenue from Phone orders in the Retail segment: **9,194,700**.",
+        "correct": true,
+        "tool_calls": 1,
+        "steps": 2,
+        "error": null,
+        "seconds": 1.16
+      }
+    ]
+  },
+  "baseline_rows_shown": 20,
+  "baseline": {
+    "summary": {
+      "overall": {
+        "questions": 27,
+        "correct": 16,
+        "accuracy": 59.3,
+        "avg_tool_calls": 0.0,
+        "avg_seconds": 1.02,
+        "errors": 0
+      },
+      "by_dataset": {
+        "employees": {
+          "questions": 15,
+          "correct": 15,
+          "accuracy": 100.0,
+          "avg_tool_calls": 0.0,
+          "avg_seconds": 0.82,
+          "errors": 0
+        },
+        "sales": {
+          "questions": 12,
+          "correct": 1,
+          "accuracy": 8.3,
+          "avg_tool_calls": 0.0,
+          "avg_seconds": 1.26,
+          "errors": 0
+        }
+      }
+    },
+    "rows": [
+      {
+        "dataset": "employees",
+        "question": "What is the average salary?",
+        "expected": 66333.33333333333,
+        "answer": "The average salary is **\u20b966,333.33**.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.55
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the highest salary?",
+        "expected": 95000.0,
+        "answer": "The highest salary in the dataset is **\u20b995,000**.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.84
+      },
+      {
+        "dataset": "employees",
+        "question": "Who earns the highest salary?",
+        "expected": "Ravi",
+        "answer": "Ravi earns the highest salary.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.43
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees work in Engineering?",
+        "expected": 6.0,
+        "answer": "6 employees work in Engineering.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.69
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees are based in Hyderabad?",
+        "expected": 4.0,
+        "answer": "4 employees are based in Hyderabad.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.61
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average salary in the Engineering department?",
+        "expected": 81666.66666666667,
+        "answer": "The average salary in the Engineering department is **\u20b981,667** (rounded to the nearest rupee).",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.74
+      },
+      {
+        "dataset": "employees",
+        "question": "Which department has the highest average salary?",
+        "expected": "Engineering",
+        "answer": "Engineering has the highest average salary.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.99
+      },
+      {
+        "dataset": "employees",
+        "question": "How much higher is the average Engineering salary than the average Marketing salary?",
+        "expected": 21666.66666666667,
+        "answer": "The average Engineering salary is about\u202f$81,667, while the average Marketing salary is\u202f$60,000.  \nSo Engineering salaries are roughly **$21,667 higher** on average.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.89
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the total salary paid to the HR department?",
+        "expected": 205000.0,
+        "answer": "The total salary paid to the HR department is **\u20b9205,000**.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.7
+      },
+      {
+        "dataset": "employees",
+        "question": "How many employees have more than 5 years of experience?",
+        "expected": 5.0,
+        "answer": "5 employees have more than 5 years of experience.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.7
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average salary of Engineering employees based in Hyderabad?",
+        "expected": 76250.0,
+        "answer": "The average salary of Engineering employees based in Hyderabad is **\u20b976,250**.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.78
+      },
+      {
+        "dataset": "employees",
+        "question": "Which department has the most employees?",
+        "expected": "Engineering",
+        "answer": "Engineering has the most employees.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.96
+      },
+      {
+        "dataset": "employees",
+        "question": "Who are the three lowest-paid employees?",
+        "expected": [
+          "Sneha",
+          "Kavya",
+          "Karthik"
+        ],
+        "answer": "The three lowest\u2011paid employees are:\n\n1. Sneha \u2013 \u20b948,000  \n2. Kavya \u2013 \u20b950,000  \n3. Karthik \u2013 \u20b952,000",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.02
+      },
+      {
+        "dataset": "employees",
+        "question": "What is the average experience in years of HR employees?",
+        "expected": 2.75,
+        "answer": "The average experience of HR employees is **2.75 years**.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.53
+      },
+      {
+        "dataset": "employees",
+        "question": "What percentage of employees work in Marketing?",
+        "expected": 33.33333333333333,
+        "answer": "33.3\u202f% of the employees work in Marketing.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.88
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue?",
+        "expected": 118600900.0,
+        "answer": "**Total revenue:** 10,627,800\n",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.03
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the average number of units per order?",
+        "expected": 15.5125,
+        "answer": "The average number of units per order in the provided 20 rows is **16.3 units**.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.83
+      },
+      {
+        "dataset": "sales",
+        "question": "Which region has the highest total revenue?",
+        "expected": "West",
+        "answer": "East has the highest total revenue.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.17
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue for the West region?",
+        "expected": 41153800.0,
+        "answer": "The total revenue for the West region is **1,477,300**.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.04
+      },
+      {
+        "dataset": "sales",
+        "question": "How many orders came from the Corporate segment?",
+        "expected": 72.0,
+        "answer": "5 orders came from the Corporate segment.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.49
+      },
+      {
+        "dataset": "sales",
+        "question": "Which product category has the highest average revenue per order?",
+        "expected": "Laptop",
+        "answer": "Laptop.",
+        "correct": true,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.58
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the average unit price of Laptop orders?",
+        "expected": 71075.0,
+        "answer": "The average unit price of Laptop orders is **$64,640**.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.69
+      },
+      {
+        "dataset": "sales",
+        "question": "Which three orders have the highest revenue? Give their order IDs.",
+        "expected": [
+          "ORD-1185",
+          "ORD-1157",
+          "ORD-1121"
+        ],
+        "answer": "ORD-1016, ORD-1020, ORD-1001",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 2.03
+      },
+      {
+        "dataset": "sales",
+        "question": "Which month has the highest total revenue?",
+        "expected": "May",
+        "answer": "January has the highest total revenue.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.18
+      },
+      {
+        "dataset": "sales",
+        "question": "How many orders had more than 20 units?",
+        "expected": 83.0,
+        "answer": "9 orders had more than 20 units.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 0.84
+      },
+      {
+        "dataset": "sales",
+        "question": "How much more total revenue did the North region make than the South region?",
+        "expected": 1131200.0,
+        "answer": "$148,500$ more.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 1.21
+      },
+      {
+        "dataset": "sales",
+        "question": "What is the total revenue from Phone orders in the Retail segment?",
+        "expected": 9194700.0,
+        "answer": "The total revenue from Phone orders in the Retail segment is **2,428,100**.",
+        "correct": false,
+        "tool_calls": 0,
+        "steps": 1,
+        "error": null,
+        "seconds": 2.06
+      }
+    ]
+  }
+}
