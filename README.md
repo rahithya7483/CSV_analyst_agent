@@ -7,7 +7,7 @@ measures accuracy against pandas ground truth.
 
 Built with GPT-OSS-20B (Groq API), FastAPI, Streamlit and Docker.
 
-**Live demo:** ``
+**Live demo:** `https://csvanalystagent.streamlit.app/`
 
 ## Why this exists
 
